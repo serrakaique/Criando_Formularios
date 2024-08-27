@@ -1,0 +1,251 @@
+:root{
+    font-size: 62.5%;
+    --background-color:hsl(228, 15%, 38%);
+    --background-color-secondary:hsl(0, 0%, 94%);
+    --button-color:hsl(348, 100%, 66%);
+    --button-hover:hsl(348, 98%, 52%);
+    --span-color:hsl(259, 14%, 77%);
+    --span-hover:hsl(256, 5%, 47%);
+    --input-color:hsla(240, 24%, 92%, 1);
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+    text-decoration: none;
+    
+    border: none;
+  
+    box-sizing: border-box;
+  }
+  body{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+  
+    background-color: var(--background-color-secondary);
+  }
+  
+  .container{
+    max-width: 75rem;
+  
+    margin-block: 13.8rem;
+  
+    margin-inline: auto;
+  }
+  
+  h1,legend,button{
+    font-family: 'Staatliches', cursive;
+  }
+  
+  body::before{
+    content: '';
+  
+    background: var(--background-color);
+  
+    display: block;
+    width: 100%;
+    height: 43.6rem;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  
+  header{
+    color: #ffffff;
+  }
+  header h1{
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 6.0rem;
+  }
+  header p{
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 41.7rem;
+  
+    margin-block: 1.8rem 5.8rem;
+  }
+  
+  
+  form{
+    background-color: #ffffff;
+  
+    border-radius: 20px 20px 0px 0px;
+  
+    padding: 6.4rem;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  
+  fieldset{
+    display: flex;
+    flex-direction: column;
+  }
+  fieldset legend{
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+  
+    width: 100%;
+  
+    color: var(--background-color);
+  
+    padding-bottom: .8rem;
+    border-bottom: 1px solid var(--input-color);
+    margin-bottom: 3.2rem;
+  }
+  fieldset label{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  
+    color: var(--background-color);
+  
+    display: flex;
+    gap: .912rem;
+    align-items: center;
+  
+    margin-bottom: 8px;
+  }
+  
+  fieldset label span{
+    font-size: 1.2rem;
+    line-height: 2rem;
+  
+    color:var(--span-color);
+  }
+  fieldset label span:hover{
+    color: var(--span-hover);
+  }
+  fieldset input{
+    border: 1px solid var(--input-color);
+    border-radius: .8rem;
+  
+    background: #FAFAFC;
+    
+    width: 62.2rem;
+    height: 5.6rem;
+  }
+  
+  
+  #personalInformation legend{
+    padding-bottom: 1.6rem;
+  
+    margin-bottom: 3.6rem;
+  }
+  
+  #personalInformation .completeName{
+    display: flex;
+    gap: 2.2rem;
+    align-items: center;
+    margin-bottom: 1.6rem;
+  }
+  #personalInformation .partialName input{
+    width: 30rem;
+  }
+  #personalInformation input + label{
+    margin-top: 1.6rem;
+  }
+  #firstMentorship legend,#secondMentorship legend{
+    border: none;
+  
+    padding: 0;
+    margin-bottom: .8rem;
+  }
+  #firstMentorship{
+    margin-bottom: 1.6rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  #firstMentorship .dateSettings, #secondMentorship .dateSettings{
+  margin-right: 3.2rem;
+  }
+  #firstMentorship .dateSettings input, #secondMentorship .dateSettings input{
+    width: 30rem;
+  }
+  #firstMentorship .hours input, #secondMentorship .hours input{
+    width: 14rem;
+  }
+  
+  .hours + .hours{
+    margin-left: 1rem;
+  }
+  
+  #secondMentorship{
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  footer{
+    padding: 5.267rem 7.1rem;
+  
+    background: var(--background-color);
+  
+    text-align: center;
+  
+    border-radius: 0px 0px 20px 20px;
+  }
+  footer button{
+    width: 100%;
+  
+    padding-block: 1.483rem;
+  
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+  
+    background: var(--button-color);  
+  
+    border-radius: 2rem;
+  
+    transition: all 400ms;
+  }
+  
+  footer button:hover{
+  background-color: var(--button-hover);
+  }
+  
+  
+  @media (max-width:425px) {
+    :root{
+      font-size: 45%;
+    }
+    .container{
+      width: 100%;
+      margin-inline: 0;
+    }
+  
+    header{
+      margin-left: 5.12rem;
+    }
+    header p{
+      width: 100%;
+    }
+  
+    form input{
+      width: 100%;
+    }
+  
+    #personalInformation .completeName{
+      flex-direction: column;
+  
+      align-items: flex-start;
+    }
+  
+    #firstMentorship, #secondMentorship{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    #firstMentorship .dateSettings, #secondMentorship .dateSettings{
+      margin: 0 0 3.2rem 0;
+    }
+    .hours + .hours{
+      margin: 1rem 0 0 0;
+    }
+  }
